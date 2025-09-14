@@ -1,3 +1,5 @@
 {
-  "item.jetly.sharp_stick": "Sharp Stick"
+  "item.jetly.ash_stick": "Ash Stick",
+  "block.jetly.ash_log": "Ash Log",
+  "block.jetly.ash_leaves": "Ash Leaves"
 }
