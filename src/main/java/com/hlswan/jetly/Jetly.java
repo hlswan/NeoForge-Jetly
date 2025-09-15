@@ -38,6 +38,8 @@ public class Jetly {
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
 
+        
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -57,6 +59,8 @@ public class Jetly {
             event.accept(ModItems.ASH_LEAVES_ITEM);
             event.accept(ModItems.ASH_LOG_ITEM);
 
+        } else if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(ModItems.WILD_BLUEBERRIES);
         }
 
     }

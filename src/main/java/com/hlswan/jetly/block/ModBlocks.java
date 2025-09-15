@@ -1,15 +1,17 @@
 package com.hlswan.jetly.block;
 
 import com.hlswan.jetly.Jetly;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.bus.api.IEventBus;
@@ -40,6 +42,7 @@ public class ModBlocks {
                     .isSuffocating((state, level, pos) -> false)
                     .isViewBlocking((state, level, pos) -> false)
                     .isValidSpawn((state, level, pos, type) -> type == EntityType.OCELOT || type == EntityType.PARROT)// The properties to use.
+                    .noOcclusion()
     );
 
     public static final DeferredBlock<Block> LOAM = BLOCKS.registerBlock("loam",
@@ -55,6 +58,18 @@ public class ModBlocks {
                     .strength(0.5F)
                     .sound(SoundType.LEAF_LITTER)
                     .mapColor(MapColor.COLOR_BROWN)
+    );
+
+    public static final DeferredBlock<WildBlueBerryBushBlock> WILD_BLUEBERRY_BUSH = BLOCKS.registerBlock("wild_blueberry_bush",
+            WildBlueBerryBushBlock::new,
+            BlockBehaviour.Properties.of()
+                    .instabreak()
+                    .sound(SoundType.SWEET_BERRY_BUSH)
+                    .mapColor(MapColor.PLANT)
+                    .randomTicks()
+                    .noCollission()
+                    .pushReaction(PushReaction.DESTROY)
+                    .noOcclusion()
     );
 
 
