@@ -60,6 +60,32 @@ public class ModBlocks {
                     .mapColor(MapColor.COLOR_BROWN)
     );
 
+    public static final DeferredBlock<Block> MAPLE_LOG = BLOCKS.register(
+            "maple_log", registryName -> new RotatedPillarBlock(
+                    BlockBehaviour.Properties.of()
+                            // The ID must be set on the block
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .strength(2.0F)
+                            .mapColor(MapColor.WOOD)
+                            .sound(SoundType.WOOD)
+            )
+    );
+
+    public static final DeferredBlock<Block> MAPLE_LEAVES = BLOCKS.registerBlock(
+            "maple_leaves",
+            Block::new, // The factory that the properties will be passed into.
+            BlockBehaviour.Properties.of()
+                    .strength(0.2F)
+                    .sound(SoundType.GRASS)
+                    .randomTicks()
+                    .ignitedByLava()
+                    .noOcclusion()
+                    .isSuffocating((state, level, pos) -> false)
+                    .isViewBlocking((state, level, pos) -> false)
+                    .isValidSpawn((state, level, pos, type) -> type == EntityType.OCELOT || type == EntityType.PARROT)// The properties to use.
+                    .noOcclusion()
+    );
+
     public static final DeferredBlock<WildBlueBerryBushBlock> WILD_BLUEBERRY_BUSH = BLOCKS.registerBlock("wild_blueberry_bush",
             WildBlueBerryBushBlock::new,
             BlockBehaviour.Properties.of()
