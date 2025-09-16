@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "jetly:block/blueberry_bush_stage3"
+    "cross": "jetly:block/blueberry_bush_stage0"
   },
   "render_type": "cutout"
 }

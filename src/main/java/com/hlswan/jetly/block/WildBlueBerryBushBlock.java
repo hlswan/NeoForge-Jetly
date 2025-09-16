@@ -25,7 +25,7 @@ public class WildBlueBerryBushBlock extends SweetBerryBushBlock {
         boolean flag = i == 3;
         if (i > 1) {
             int j = 1 + p_316429_.random.nextInt(2);
-            popResource(p_316429_, p_316748_, new ItemStack(ModItems.WILD_BLUEBERRIES.get(), j + (flag ? 1 : 0)));
+            popResource(p_316429_, p_316748_, new ItemStack(ModItems.BLUEBERRIES.get(), j + (flag ? 1 : 0)));
             p_316429_.playSound(
                     null, p_316748_, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + p_316429_.random.nextFloat() * 0.4F
             );

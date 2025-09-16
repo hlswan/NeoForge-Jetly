@@ -56,11 +56,19 @@ public class Jetly {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ASH_STICK);
-            event.accept(ModItems.ASH_LEAVES_ITEM);
-            event.accept(ModItems.ASH_LOG_ITEM);
+
+
 
         } else if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
-            event.accept(ModItems.WILD_BLUEBERRIES);
+            event.accept(ModItems.BLUEBERRIES);
+            event.accept(ModItems.MAPLE_SYRUP);
+        } else if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModItems.LOAM_ITEM);
+        } else if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModItems.ASH_LEAVES_ITEM);
+            event.accept(ModItems.ASH_LOG_ITEM);
+            event.accept(ModItems.MAPLE_LEAVES_ITEM);
+            event.accept(ModItems.MAPLE_LOG_ITEM);
         }
 
     }

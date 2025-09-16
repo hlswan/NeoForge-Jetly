@@ -1,8 +1,6 @@
 package com.hlswan.jetly.block;
 
 import com.hlswan.jetly.Jetly;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
@@ -86,7 +84,7 @@ public class ModBlocks {
                     .noOcclusion()
     );
 
-    public static final DeferredBlock<WildBlueBerryBushBlock> WILD_BLUEBERRY_BUSH = BLOCKS.registerBlock("wild_blueberry_bush",
+    public static final DeferredBlock<WildBlueBerryBushBlock> BLUEBERRY_BUSH = BLOCKS.registerBlock("blueberry_bush",
             WildBlueBerryBushBlock::new,
             BlockBehaviour.Properties.of()
                     .instabreak()
@@ -97,7 +95,6 @@ public class ModBlocks {
                     .pushReaction(PushReaction.DESTROY)
                     .noOcclusion()
     );
-
 
 
     public static void register(IEventBus eventBus) {

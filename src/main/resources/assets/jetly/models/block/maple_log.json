@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "jetly:block/maple_log_top",
+    "side": "jetly:block/maple_log"
+  }
+}

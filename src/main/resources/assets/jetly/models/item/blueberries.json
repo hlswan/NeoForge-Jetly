@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "jetly:item/wild_blueberries"
+    "layer0": "jetly:item/blueberries"
   }
 }
