@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "axis=x": {
+      "model": "jetly:block/ash_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
       "model": "jetly:block/ash_log"
+    },
+    "axis=z": {
+      "model": "jetly:block/ash_log_horizontal",
+      "x": 90
     }
   }
 }

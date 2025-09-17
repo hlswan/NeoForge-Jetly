@@ -1,11 +1,16 @@
 {
   "item.jetly.ash_stick": "Ash Stick",
+  "item.jetly.ash_handle": "Ash Handle",
+  "item.jetly.maple_stick": "Maple Stick",
+  "item.jetly.maple_handle": "Maple Handle",
   "item.jetly.blueberries": "Blueberries",
-
+  "item.jetly.maple_syrup": "Maple Syrup",
 
   "block.jetly.ash_log": "Ash Log",
   "block.jetly.ash_leaves": "Ash Leaves",
+  "block.jetly.ash_planks": "Ash Planks",
   "block.jetly.maple_log": "Maple Log",
   "block.jetly.maple_leaves": "Maple Leaves",
+  "block.jetly.maple_planks": "Maple Planks",
   "block.jetly.loam": "Loam"
 }

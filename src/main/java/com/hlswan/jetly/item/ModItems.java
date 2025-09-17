@@ -20,6 +20,22 @@ public class ModItems {
             new Item.Properties()
     );
 
+    public static final DeferredItem<Item> ASH_HANDLE = ITEMS.registerItem(
+            "ash_handle",
+            Item::new,
+            new Item.Properties());
+
+    public static final DeferredItem<Item> MAPLE_STICK = ITEMS.registerItem(
+            "maple_stick",
+            Item::new,
+            new Item.Properties()
+        );
+
+    public static final DeferredItem<Item> MAPLE_HANDLE = ITEMS.registerItem(
+            "maple_handle",
+            Item::new,
+            new Item.Properties()
+    );
 
     public static final DeferredItem<Item> BLUEBERRIES = ITEMS.registerSimpleItem(
             "blueberries",
@@ -70,7 +86,11 @@ public class ModItems {
     public static final DeferredItem<BlockItem> MAPLE_LEAVES_ITEM =
             ITEMS.registerSimpleBlockItem(ModBlocks.MAPLE_LEAVES);
 
+    public static final DeferredItem<BlockItem> MAPLE_PLANKS_ITEM =
+            ITEMS.registerSimpleBlockItem(ModBlocks.MAPLE_PLANKS);
 
+    public static final DeferredItem<BlockItem> ASH_PLANKS_ITEM =
+            ITEMS.registerSimpleBlockItem(ModBlocks.ASH_PLANKS);
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

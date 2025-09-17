@@ -56,9 +56,9 @@ public class Jetly {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ASH_STICK);
-
-
-
+            event.accept(ModItems.ASH_HANDLE);
+            event.accept(ModItems.MAPLE_STICK);
+            event.accept(ModItems.MAPLE_HANDLE);
         } else if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItems.BLUEBERRIES);
             event.accept(ModItems.MAPLE_SYRUP);
@@ -67,10 +67,11 @@ public class Jetly {
         } else if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModItems.ASH_LEAVES_ITEM);
             event.accept(ModItems.ASH_LOG_ITEM);
+            event.accept(ModItems.ASH_PLANKS_ITEM);
             event.accept(ModItems.MAPLE_LEAVES_ITEM);
             event.accept(ModItems.MAPLE_LOG_ITEM);
+            event.accept(ModItems.MAPLE_PLANKS_ITEM);
         }
-
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "jetly:item/ash_handle"
+  },
+  "properties": {
+    "oversized_in_gui": false
+  }
+}

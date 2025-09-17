@@ -5,6 +5,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -19,7 +20,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> ASH_LOG = BLOCKS.register(
             "ash_log", registryName -> new RotatedPillarBlock(
-                    BlockBehaviour.Properties.of()
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
                             // The ID must be set on the block
                             .setId(ResourceKey.create(Registries.BLOCK, registryName))
                             .strength(2.0F)
@@ -43,6 +44,13 @@ public class ModBlocks {
                     .noOcclusion()
     );
 
+    public static final DeferredBlock<Block> ASH_PLANKS = BLOCKS.registerBlock(
+            "ash_planks",
+            Block::new,
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .sound(SoundType.NETHER_WOOD)
+    );
+
     public static final DeferredBlock<Block> LOAM = BLOCKS.registerBlock("loam",
             Block::new,
             BlockBehaviour.Properties.of()
@@ -60,7 +68,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> MAPLE_LOG = BLOCKS.register(
             "maple_log", registryName -> new RotatedPillarBlock(
-                    BlockBehaviour.Properties.of()
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
                             // The ID must be set on the block
                             .setId(ResourceKey.create(Registries.BLOCK, registryName))
                             .strength(2.0F)
@@ -81,7 +89,12 @@ public class ModBlocks {
                     .isSuffocating((state, level, pos) -> false)
                     .isViewBlocking((state, level, pos) -> false)
                     .isValidSpawn((state, level, pos, type) -> type == EntityType.OCELOT || type == EntityType.PARROT)// The properties to use.
-                    .noOcclusion()
+    );
+
+    public static final DeferredBlock<Block> MAPLE_PLANKS = BLOCKS.registerBlock("maple_planks",
+            Block::new,
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+                    .sound(SoundType.CHERRY_WOOD)
     );
 
     public static final DeferredBlock<WildBlueBerryBushBlock> BLUEBERRY_BUSH = BLOCKS.registerBlock("blueberry_bush",
