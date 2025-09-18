@@ -71,11 +71,24 @@ public class ModItems {
                     )
     );
 
-    public static final DeferredItem<Item> HIDE_STRING = ITEMS.registerItem(
-            "hide_string",
+    public static final DeferredItem<Item> FIBER_STRING = ITEMS.registerItem(
+            "fiber_string",
             Item::new,
             new Item.Properties()
     );
+
+    public static final DeferredItem<Item> DOGBANE_STALK = ITEMS.registerItem(
+            "dogbane_stalk",
+            Item::new,
+            new Item.Properties()
+    );
+
+    public static final DeferredItem<Item> DOGBANE_FIBER = ITEMS.registerItem(
+            "dogbane_fiber",
+            Item::new,
+            new Item.Properties()
+    );
+
 
     public static final DeferredItem<BlockItem> ASH_LOG_ITEM =
             ITEMS.registerSimpleBlockItem(ModBlocks.ASH_LOG);

@@ -23,17 +23,17 @@ public class ModBlocks {
                     BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
                             // The ID must be set on the block
                             .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                            .strength(2.0F)
+                            .strength(6.0F)
                             .mapColor(MapColor.WOOD)
-                            .sound(SoundType.WOOD)
+                            .sound(SoundType.NETHER_WOOD)
             )
     );
 
     public static final DeferredBlock<Block> ASH_LEAVES = BLOCKS.registerBlock(
             "ash_leaves",
             Block::new, // The factory that the properties will be passed into.
-            BlockBehaviour.Properties.of()
-                    .strength(0.2F)
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
+                    .strength(0.7F)
                     .sound(SoundType.GRASS)
                     .randomTicks()
                     .ignitedByLava()
@@ -49,6 +49,7 @@ public class ModBlocks {
             Block::new,
             BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
                     .sound(SoundType.NETHER_WOOD)
+                    .strength(3F)
     );
 
     public static final DeferredBlock<Block> LOAM = BLOCKS.registerBlock("loam",
@@ -73,15 +74,15 @@ public class ModBlocks {
                             .setId(ResourceKey.create(Registries.BLOCK, registryName))
                             .strength(2.0F)
                             .mapColor(MapColor.WOOD)
-                            .sound(SoundType.WOOD)
+                            .sound(SoundType.CHERRY_WOOD)
             )
     );
 
     public static final DeferredBlock<Block> MAPLE_LEAVES = BLOCKS.registerBlock(
             "maple_leaves",
             Block::new, // The factory that the properties will be passed into.
-            BlockBehaviour.Properties.of()
-                    .strength(0.2F)
+            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
+                    .strength(0.7F)
                     .sound(SoundType.GRASS)
                     .randomTicks()
                     .ignitedByLava()
@@ -97,11 +98,23 @@ public class ModBlocks {
                     .sound(SoundType.CHERRY_WOOD)
     );
 
-    public static final DeferredBlock<WildBlueBerryBushBlock> BLUEBERRY_BUSH = BLOCKS.registerBlock("blueberry_bush",
-            WildBlueBerryBushBlock::new,
+    public static final DeferredBlock<BlueberryBushBlock> BLUEBERRY_BUSH = BLOCKS.registerBlock("blueberry_bush",
+            BlueberryBushBlock::new,
             BlockBehaviour.Properties.of()
                     .instabreak()
                     .sound(SoundType.SWEET_BERRY_BUSH)
+                    .mapColor(MapColor.PLANT)
+                    .randomTicks()
+                    .noCollission()
+                    .pushReaction(PushReaction.DESTROY)
+                    .noOcclusion()
+    );
+
+    public static final DeferredBlock<Block> DOGBANE = BLOCKS.registerBlock("dogbane",
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
                     .mapColor(MapColor.PLANT)
                     .randomTicks()
                     .noCollission()
