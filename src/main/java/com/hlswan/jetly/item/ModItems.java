@@ -71,6 +71,12 @@ public class ModItems {
                     )
     );
 
+    public static final DeferredItem<Item> HIDE_STRING = ITEMS.registerItem(
+            "hide_string",
+            Item::new,
+            new Item.Properties()
+    );
+
     public static final DeferredItem<BlockItem> ASH_LOG_ITEM =
             ITEMS.registerSimpleBlockItem(ModBlocks.ASH_LOG);
 
