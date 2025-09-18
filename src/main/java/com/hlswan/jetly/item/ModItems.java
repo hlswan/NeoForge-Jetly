@@ -14,6 +14,24 @@ import net.neoforged.bus.api.IEventBus;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Jetly.MODID);
 
+    public static final DeferredItem<Item> CHUNK_OF_FLINT = ITEMS.registerItem(
+            "chunk_of_flint",
+            Item::new,
+            new Item.Properties()
+    );
+
+    public static final DeferredItem<Item> PEBBLE = ITEMS.registerItem(
+            "pebble",
+            Item::new,
+            new Item.Properties()
+    );
+
+    public static final DeferredItem<Item> SAWDUST = ITEMS.registerItem(
+            "sawdust",
+            Item::new,
+            new Item.Properties()
+    );
+
     public static final DeferredItem<Item> ASH_STICK = ITEMS.registerItem(
             "ash_stick",
             Item::new,
@@ -70,6 +88,7 @@ public class ModItems {
                                     .build()
                     )
     );
+
 
     public static final DeferredItem<Item> FIBER_STRING = ITEMS.registerItem(
             "fiber_string",

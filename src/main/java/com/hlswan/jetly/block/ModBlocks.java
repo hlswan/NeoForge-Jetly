@@ -18,16 +18,6 @@ import net.neoforged.bus.api.IEventBus;
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Jetly.MODID);
 
-    public static final DeferredBlock<Block> ASH_LOG = BLOCKS.register(
-            "ash_log", registryName -> new RotatedPillarBlock(
-                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
-                            // The ID must be set on the block
-                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
-                            .strength(6.0F)
-                            .mapColor(MapColor.WOOD)
-                            .sound(SoundType.NETHER_WOOD)
-            )
-    );
 
     public static final DeferredBlock<Block> ASH_LEAVES = BLOCKS.registerBlock(
             "ash_leaves",
@@ -67,6 +57,18 @@ public class ModBlocks {
                     .mapColor(MapColor.COLOR_BROWN)
     );
 
+    public static final DeferredBlock<Block> ASH_LOG = BLOCKS.register(
+            "ash_log", registryName -> new RotatedPillarBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
+                            // The ID must be set on the block
+                            .setId(ResourceKey.create(Registries.BLOCK, registryName))
+                            .strength(6.0F)
+                            .mapColor(MapColor.WOOD)
+                            .sound(SoundType.NETHER_WOOD)
+                            .requiresCorrectToolForDrops()
+            )
+    );
+
     public static final DeferredBlock<Block> MAPLE_LOG = BLOCKS.register(
             "maple_log", registryName -> new RotatedPillarBlock(
                     BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
@@ -75,6 +77,7 @@ public class ModBlocks {
                             .strength(2.0F)
                             .mapColor(MapColor.WOOD)
                             .sound(SoundType.CHERRY_WOOD)
+
             )
     );
 
