@@ -83,7 +83,7 @@ public class ModItems {
                     .component(
                             DataComponents.CONSUMABLE,
                             Consumable.builder()
-                                    .consumeSeconds(2)
+                                    .consumeSeconds(5)
                                     .sound(SoundEvents.HONEY_DRINK)
                                     .build()
                     )
