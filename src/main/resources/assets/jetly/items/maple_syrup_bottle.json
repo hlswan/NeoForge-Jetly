@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "jetly:item/maple_syrup_bottle"
+  },
+  "properties": {
+    "oversized_in_gui": false
+  }
+}

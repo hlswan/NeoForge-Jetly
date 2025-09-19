@@ -61,7 +61,7 @@ public class Jetly {
             event.accept(ModItems.MAPLE_HANDLE);
         } else if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItems.BLUEBERRIES);
-            event.accept(ModItems.MAPLE_SYRUP);
+            event.accept(ModItems.MAPLE_SYRUP_BOTTLE);
         } else if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModItems.LOAM_ITEM);
         } else if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {

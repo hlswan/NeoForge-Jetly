@@ -71,8 +71,8 @@ public class ModItems {
             new Item.Properties()
     );
 
-    public static final DeferredItem<Item> MAPLE_SYRUP = ITEMS.registerSimpleItem(
-            "maple_syrup",
+    public static final DeferredItem<Item> MAPLE_SYRUP_BOTTLE = ITEMS.registerSimpleItem(
+            "maple_syrup_bottle",
             new Item.Properties().food(
                     new FoodProperties.Builder()
                             .nutrition(3)
@@ -87,6 +87,12 @@ public class ModItems {
                                     .sound(SoundEvents.HONEY_DRINK)
                                     .build()
                     )
+    );
+
+    public static final DeferredItem<Item> CANTEEN = ITEMS.registerItem(
+            "canteen",
+            Item::new,
+            new Item.Properties()
     );
 
 
