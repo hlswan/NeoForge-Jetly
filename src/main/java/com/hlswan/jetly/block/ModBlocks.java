@@ -113,9 +113,9 @@ public class ModBlocks {
                     .noOcclusion()
     );
 
-    public static final DeferredBlock<Block> DOGBANE = BLOCKS.registerBlock("dogbane",
+    public static final DeferredBlock<Block> WILD_DOGBANE = BLOCKS.registerBlock("wild_dogbane",
             Block::new,
-            BlockBehaviour.Properties.of()
+            BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS)
                     .instabreak()
                     .sound(SoundType.GRASS)
                     .mapColor(MapColor.PLANT)
@@ -123,6 +123,12 @@ public class ModBlocks {
                     .noCollission()
                     .pushReaction(PushReaction.DESTROY)
                     .noOcclusion()
+    );
+
+    public static final DeferredBlock<Block> DOGBANE = BLOCKS.registerBlock(
+            "dogbane",
+            Block::new,
+            BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)
     );
 
 
